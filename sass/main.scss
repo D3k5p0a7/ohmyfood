@@ -1,0 +1,18 @@
+@import './base/fonts';
+@import './base/variables';
+@import './base/mixin';
+@import './pages/home';
+@import './pages/menu';
+@import './layouts/header';
+@import './layouts/footer';
+
+
+
+body, html{
+    font-family: $font-Roboto;
+}
+
+.container {
+    max-width: 567px;
+    margin: 0 auto;
+}

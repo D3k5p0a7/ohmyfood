@@ -1,0 +1,247 @@
+a{
+    font-size: $font20;
+    text-decoration: none;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+h1, h2, h3{
+    font-size: $font32;
+}
+.container-main{
+    @include container-mb;
+}
+.location-header{
+    background-color: $color-grey;
+    position: relative;
+    z-index: 1;
+    padding: 7px 0;
+    .container-main{
+       form{
+        @include flexcentre;
+        align-items: center;
+        i{
+            font-size: $font20;
+        }
+        p{
+            margin-left: $left20px;
+            font-weight: $weight600;
+            font-size: $font20;
+        }
+       }
+    }
+}
+
+.bookmenu{
+    background-color: $color-lightgrey;
+    padding: $paddingtopbottm;
+    .menu-inside{
+        flex-direction: column;
+        align-items: center;
+        p{
+            font-size: $font24;
+            text-align: center;
+            font-weight: $weight300;
+            padding-bottom: $spacebottom;
+            line-height: 1.3;
+        }
+        a{
+            padding: 20px 30px;
+            text-decoration: none;
+            background: #ccc;
+            border-radius: 50px;
+            font-weight: $weight500;
+            color: $color-white;
+            margin-bottom: $spacebottom;
+            @include shadowbottom;
+            @include gradient;
+        }
+    }
+}
+
+.works{
+    padding: $paddingtopbottm;
+    .work-inside{
+        @include container-space;
+        h2{
+            font-size: $font32;
+            padding-bottom: $spacebottom;
+        }
+        section{
+            padding-left: 20px;
+            a{
+                position: relative;
+                text-decoration: none;
+                color: $color-black;
+                display: flex;
+                margin-bottom: 30px;
+                padding: 40px;
+                background: $color-lightgrey;
+                border-radius: 30px;
+                font-weight: $weight600;
+                @include shadowbottom;
+                &::before{
+                    position: absolute;
+                    content: "2";
+                    width: 30px;
+                    height: 30px;
+                    background: $color-primary;
+                    border-radius: 100%;
+                    left: -15px;
+                    @include flexcentre;
+                    display: flex;
+                    color: $color-white;
+                }
+                i{
+                    color: $color-icon;
+                    margin-right: 30px;
+                    font-size: $font24;
+                    width: 25px;
+                    @include flexcentre;
+                    &:hover{
+                        color: $color-primary;
+                    }
+                    &:focus{
+                        color: $color-primary;
+                    }
+                }
+                span{
+                    text-transform: $text-transform;
+                    padding-right: 6px;
+                }
+                &:hover{
+                    color: $color-primary;
+                    @include smoothtrans;
+                    @include darkshadow;
+                }
+            }
+            &:nth-child(2){
+                a{
+                    &::before{
+                        content: "1";
+                    }
+                }
+            }
+            &:last-child{
+                a{
+                    &::before{
+                        content: "3";
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.restaurant-main{
+    background-color: $color-lightgrey;
+    padding: $paddingtopbottm;
+    .restaurant-in{
+        @include container-space;
+        h3{
+            text-transform: $text-transform;
+        }
+        .category{
+            section{
+                a{
+                    color: $color-black;
+                    &:hover{
+                        color: $color-primary;
+                        @include smoothtrans;
+                    }
+                }
+                background-color: $color-white;
+                    @include shadowbottom;
+                    margin-bottom: 30px;
+                    border-radius: 25px;
+                    .img-section{
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            content: "new";
+                            width: 100px;
+                            height: 35px;
+                            background: $color-brand-01;
+                            color: $color-green;
+                            font-size: 20px;
+                            right: 20px;
+                            top: 20px;
+                            border-radius: 5px;
+                            font-weight: $weight600;
+                            text-transform: $text-transform;
+                            @include flexcentre;
+                        }
+                        img{
+                            object-fit: cover;
+                            width: 100%;
+                            height: 250px;
+                            border-radius: 25px 25px 0 0;
+                        }
+                    }
+                    .details{
+                        @include flexcentre;
+                        justify-content: space-between;
+                        padding: 0px 20px;
+                        h4{
+                            font-size: $font23;
+                            text-transform: $text-transform;
+                            line-height: 1.4;
+                            margin: 20px 0;
+                            span{
+                                font-weight: $weight300;
+                            }
+                        }
+                        i{
+                            font-size: $font32;
+                        }
+                    }
+                    &:nth-child(3){
+                        .img-section{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        .img-section{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}
+
+footer{
+    padding: $paddingtopbottm;
+    background-color: $color-footer;
+    .container{
+        @include container-space;
+        .footer-logo{
+            img{
+                width: 170px;
+                height: 50px;
+            }
+        }
+        section{
+            ul{
+                li{
+                    a{
+                        color: $color-white;
+                        font-size: $font22;
+                        line-height: 1.6;
+                        i{
+                            width: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

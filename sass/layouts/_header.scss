@@ -1,0 +1,17 @@
+ 
+header {
+    padding: 30px 0 20px;
+    position: relative;
+    z-index: 2;
+    @include shadowbottom;
+    .container{
+        .header-logo {
+            @include flexcentre;
+            img {
+             width: 200px;
+             height: auto;
+             min-width: 150px;
+            }
+         }
+    }
+}  
