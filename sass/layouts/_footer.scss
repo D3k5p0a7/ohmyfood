@@ -1,0 +1,19 @@
+footer{
+    padding: $paddingtopbottm;
+    background-color: $color-footer;
+    .container{
+        @include container-space;
+    }
+    img{
+        width: 170px;
+        height: 50px;
+    }
+    a{
+        color: $color-white;
+        font-size: $font22;
+        line-height: 1.6;
+    }
+    i{
+        width: 35px;
+    }
+}

@@ -14,7 +14,7 @@ h1, h2, h3{
 .container-main{
     @include container-mb;
 }
-.location-header{
+.header__location{
     background-color: $color-grey;
     position: relative;
     z-index: 1;
@@ -38,7 +38,7 @@ h1, h2, h3{
 .bookmenu{
     background-color: $color-lightgrey;
     padding: $paddingtopbottm;
-    .menu-inside{
+    &__inside{
         flex-direction: column;
         align-items: center;
         p{
@@ -64,7 +64,7 @@ h1, h2, h3{
 
 .works{
     padding: $paddingtopbottm;
-    .work-inside{
+    &__inside{
         @include container-space;
         h2{
             font-size: $font32;
@@ -92,7 +92,6 @@ h1, h2, h3{
                     border-radius: 100%;
                     left: -15px;
                     @include flexcentre;
-                    display: flex;
                     color: $color-white;
                 }
                 i{
@@ -137,111 +136,77 @@ h1, h2, h3{
     }
 }
 
-.restaurant-main{
+.restaurantmain{
     background-color: $color-lightgrey;
     padding: $paddingtopbottm;
-    .restaurant-in{
-        @include container-space;
-        h3{
-            text-transform: $text-transform;
+    a{
+        color: $color-black;
+        &:hover{
+            color: $color-primary;
+            @include smoothtrans;
         }
-        .category{
-            section{
-                a{
-                    color: $color-black;
-                    &:hover{
-                        color: $color-primary;
-                        @include smoothtrans;
-                    }
-                }
-                background-color: $color-white;
-                    @include shadowbottom;
-                    margin-bottom: 30px;
-                    border-radius: 25px;
-                    .img-section{
-                        position: relative;
-                        &::before{
-                            position: absolute;
-                            content: "new";
-                            width: 100px;
-                            height: 35px;
-                            background: $color-brand-01;
-                            color: $color-green;
-                            font-size: 20px;
-                            right: 20px;
-                            top: 20px;
-                            border-radius: 5px;
-                            font-weight: $weight600;
-                            text-transform: $text-transform;
-                            @include flexcentre;
-                        }
-                        img{
-                            object-fit: cover;
-                            width: 100%;
-                            height: 250px;
-                            border-radius: 25px 25px 0 0;
-                        }
-                    }
-                    .details{
-                        @include flexcentre;
-                        justify-content: space-between;
-                        padding: 0px 20px;
-                        h4{
-                            font-size: $font23;
-                            text-transform: $text-transform;
-                            line-height: 1.4;
-                            margin: 20px 0;
-                            span{
-                                font-weight: $weight300;
-                            }
-                        }
-                        i{
-                            font-size: $font32;
-                        }
-                    }
-                    &:nth-child(3){
-                        .img-section{
-                            &::before{
-                                display: none;
-                            }
-                        }
-                    }
-                    &:last-child{
-                        .img-section{
-                            &::before{
-                                display: none;
-                            }
-                        }
-                    }
-            }
+    }
+    h3{
+        text-transform: $text-transform;
+    } 
+    h4{
+        font-size: $font23;
+        text-transform: $text-transform;
+        line-height: 1.4;
+        margin: 20px 0;
+        span{
+            font-weight: $weight300;
+        }
+    }
+    i{
+        font-size: $font32;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        border-radius: 25px 25px 0 0;
+    }
+    &__section {
+        margin-bottom: 35px;
+        @include darkshadow;
+        border-radius: 25px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__in{
+        @include container-space;
+    }
+    &__img{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "new";
+            width: 100px;
+            height: 35px;
+            background: $color-brand-01;
+            color: $color-green;
+            font-size: 20px;
+            right: 20px;
+            top: 20px;
+            border-radius: 5px;
+            font-weight: $weight600;
+            text-transform: $text-transform;
+            @include flexcentre;
+        }
+    }
+    &__details{
+        @include flexcentre;
+        justify-content: space-between;
+        padding: 0px 20px;
+        background-color: $color-white;
+        border-radius: 0 0 25px 25px;
+    }
+    &__imgnone{
+        &::before{
+            display: none;
         }
     }
 }
 
-footer{
-    padding: $paddingtopbottm;
-    background-color: $color-footer;
-    .container{
-        @include container-space;
-        .footer-logo{
-            img{
-                width: 170px;
-                height: 50px;
-            }
-        }
-        section{
-            ul{
-                li{
-                    a{
-                        color: $color-white;
-                        font-size: $font22;
-                        line-height: 1.6;
-                        i{
-                            width: 35px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
