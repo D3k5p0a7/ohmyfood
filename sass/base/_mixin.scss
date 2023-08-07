@@ -38,3 +38,35 @@
     transition-duration: 0.5s;
 }
 
+@mixin headerlink{
+    position: absolute;
+    left: 30px;
+}
+
+@mixin sliderimg{
+    width: 100%;
+    height: 380px;
+}
+@mixin underline{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 3px;
+        top: auto;
+        bottom: -10px;
+        background: $color-underline;
+    }
+}
+@mixin buttonformat{
+    padding: 20px 30px;
+    text-decoration: none;
+    background: #ccc;
+    border-radius: 50px;
+    font-weight: $weight500;
+    color: $color-white;
+    margin-bottom: $spacebottom;
+    @include shadowbottom;
+    @include gradient;
+}

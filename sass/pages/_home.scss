@@ -11,6 +11,18 @@ li{
 h1, h2, h3{
     font-size: $font32;
 }
+.h1{
+    font-family: $font-Shrikhand;
+    text-transform: capitalize;
+    font-size: $font38;
+    margin: 0;
+}
+.h3{
+    text-transform: uppercase;
+    font-size: $font24;
+    font-weight: 100;
+    position: relative;
+}
 .container-main{
     @include container-mb;
 }
@@ -49,15 +61,7 @@ h1, h2, h3{
             line-height: 1.3;
         }
         a{
-            padding: 20px 30px;
-            text-decoration: none;
-            background: #ccc;
-            border-radius: 50px;
-            font-weight: $weight500;
-            color: $color-white;
-            margin-bottom: $spacebottom;
-            @include shadowbottom;
-            @include gradient;
+            @include buttonformat;
         }
     }
 }
