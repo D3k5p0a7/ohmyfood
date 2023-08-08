@@ -17,6 +17,7 @@
     display: inherit;
     img{
         @include sliderimg;
+        object-fit: cover;
     }
 }
 .cards__container{
