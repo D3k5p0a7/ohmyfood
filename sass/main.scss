@@ -4,6 +4,7 @@
 @import './pages/bastille';
 @import './pages/the-enchanted-plate';
 @import './pages/the-full-palette';
+@import './base/keyframe';
 @import './layouts/header';
 @import './layouts/footer';
 
@@ -11,9 +12,112 @@
 
 body, html{
     font-family: $font-Roboto;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 567px;
     margin: 0 auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+.body {
+    animation: monanim;
+    animation-duration: 2s;
+}
+
+.loader{
+    @include spinner;
+    @include flexcentre;
+    &__in{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        animation-name: spin;
+        animation-duration: 2s;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        background: transparent;
+        border: 3px solid $color-secondary;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 150px;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: $color-primary;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px $color-primary;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        z-index: 11;
+        &::before{
+            content:'';
+            position:absolute;
+            top:-3px;
+            left:-3px;
+            width:100%;
+            height:100%;
+            border:3px solid transparent;
+            border-top:3px solid $color-primary;
+            border-right:3px solid $color-primary;
+            border-radius:50%;
+            animation:animateC 2s linear infinite;
+        }
+        span{
+        display:block;
+        position:absolute;
+        top:calc(50% - 2px);
+        left:50%;
+        width:50%;
+        height:4px;
+        background:transparent;
+        transform-origin:left;
+        animation:animate 2s linear infinite;
+        &::before{
+            content:'';
+            position:absolute;
+            width:16px;
+            height:16px;
+            border-radius:50%;
+            background:$color-primary;
+            top:-6px;
+            right:-8px;
+            box-shadow:0 0 20px $color-primary;
+        }
+        }
+    }
+}
+
+.slide-top {
+	-webkit-animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
+	        animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
+}
+
+.slide-top-2 {
+	-webkit-animation: slide-top-2 2.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
+	        animation: slide-top-2 2.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
+}
+
+.slide-top-3 {
+	-webkit-animation: slide-top-3 2.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
+	        animation: slide-top-3 2.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
+}
+
+.slide-top-4 {
+	-webkit-animation: slide-top-4 3.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
+	        animation: slide-top-4 3.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
 }

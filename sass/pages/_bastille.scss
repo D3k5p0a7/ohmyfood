@@ -1,15 +1,9 @@
 .header{
-    &__insidelink{
-        @include flexcentre;
-        position: relative;
-    }
-    &__link{
-        position: absolute;
-        left: 30px;
-    }
     i{
         font-size: $font28;
         color: $color-black;
+        position: absolute;
+        left: 25px;
     }
 }
 .slider{
@@ -33,43 +27,113 @@
     &__paddingspace{
        @include flexcentre;
        justify-content:space-between;
+       position: relative;
+    }
+    &__paddingspace:hover button > i{
+        @include heartbutton;
+    }
+    button{
+        position: absolute;
+        right: 35px;
     }
     i{
-        font-size: $font32;
-        padding-right: 35px;
+        @include fa-heart;
     }
 }
+
 .cardsmenu{
     .h3{
         @include underline;
+        margin-bottom: 40px;
     }
     h4{
         margin: 0;
-        font-size: $font24;
+        font-size: $font17;
         text-transform: capitalize;
     }
     p{
-        font-size: $font20;
-        margin: auto;
-        padding: 7px 0 0;
+        font-size: $font17;
+        margin: 5px 0 0 0;
+    }
+    h4, p{
+        padding: 0 10px;
+        transition: margin 1s ease-in-out;
+        margin-right: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     span{
         display: flex;
         align-items: end;
-        font-size: $font20;
+        font-size: $font17;
         font-weight: $weight600;
     }
     &__entrees{
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+    }
+    &__inside{
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+   
+    &__inside:hover &__slide {
+        right: 0;
+        border-radius: 0 20px 20px 0;
+        @include shadowbottom;
+    }
+    &__inside:hover &__details{
+        border-radius: 20px 0 0 20px;
+        width: 80%;
+        transition: all 0.7s ease-in-out;
+    }
+    &__inside:hover h4, &__inside:hover p{
+        margin-right: 20px;
+    } 
+    &__inside:hover i{
+        transform: rotate(360deg);
     }
     &__details{
-        background: #fff;
+        background: $color-white;
         padding: 20px 35px 20px 15px;
         border-radius: 20px;
         display: flex;
         margin-bottom: 30px;
+        width: 100%;
         justify-content: space-between;
         @include shadowbottom;
+        cursor: pointer;
+    }
+    section{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: margin ease-in-out;
+        margin-right: 0;
+    }
+    &__slide {
+        position: absolute;
+        top: 0;
+        right: -150px;
+        width: 23%;
+        background: $color-brand-01;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.7s ease-in-out;
+        height: 85px;
+        i{
+            @include flexcentre;
+            width: 100%;
+            height: 100%;
+            font-size: $font28;
+            color: $color-white;
+            transition: all 0.7s ease-in-out;
+        }
+    }
+    &__slidebig {
+        height: 103px;
     }
     &__orderbtn{
         display: flex;

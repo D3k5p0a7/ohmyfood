@@ -10,105 +10,165 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="body">
+
+<!-- LOADER -->
+  <div class="loader">
+    <div class="loader__in">Loading
+      <span></span>
+    </div>
+  </div>
+
+<!-- HEADER -->
     <header class="header">
       <div class="container">
-        <div class="header__insidelink">
-            <div class="header__link">
-                <a href="index.html" title="menulink"><i class="fa-solid fa-arrow-left"></i></a>
-            </div>
-            <div class="header-logo">
-              <img src="images/logo/ohmyfood.png" alt="ohmyfood"/>
-            </div>  
-        </div>
+        <a href="index.html" title="ohmyfood">
+          <div class="header-logo">
+            <i class="fa-solid fa-arrow-left"></i>
+            <img src="images/logo/ohmyfood.png" alt="ohmyfood"/>
+          </div>
+        </a>
       </div>
     </header>
 
+<!-- SLIDER -->
     <slider class="slider">
         <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" title="le-gourmand">
     </slider>
 
+<!-- CARDS -->
     <div class="cards__container">
       <div class="menusin">
         <div class="menusin__paddingspace">
             <h1 class="h1">le gourmand</h1>
-            <i class="fa-regular fa-heart"></i>
+            <button type="button"><i class="fas fa-heart"></i></button>
         </div>
       </div>
 
       <div class="cardsmenu">
         <div class="cardsmenu__entrees">
           <h3 class="h3">entrees</h3>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>tuna carpaccio</h4>
-              <p>Seasoned with yuzu</p>
-            </section>
-            <span>25€</span>
+          <div class="cardsmenu__inside slide-top">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>tuna carpaccio</h4>
+                <p>Seasoned with yuzu</p>
+              </section>
+              <span>25€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>crunchy lobster croquets</h4>
-              <p>With seasonal vegetables</p>
-            </section>
-            <span>35€</span>
+            
+          <div class="cardsmenu__inside slide-top-2">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>crunchy lobster croquets</h4>
+                <p>With seasonal vegetables</p>
+              </section>
+              <span>35€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>mushroom soup</h4>
-              <p>With truffles</p>
-            </section>
-            <span>20€</span>
+          
+          <div class="cardsmenu__inside slide-top-2">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>mushroom soup</h4>
+                <p>With truffles</p>
+              </section>
+              <span>20€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
         </div>
 
         <div class="cardsmenu__entrees">
           <h3 class="h3">main dish</h3>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>roast chicken with provincal<br>herbs</h4>
-              <p>With truffle cream</p>
-            </section>
-            <span>40€</span>
+          <div class="cardsmenu__inside slide-top">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>roast chicken with provincal<br>herbs</h4>
+                <p>With truffle cream</p>
+              </section>
+              <span>40€</span>
+            </div>
+            <div class="cardsmenu__slide cardsmenu__slidebig">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>roasted lobster</h4>
-              <p>With seasonal vegetables</p>
-            </section>
-            <span>35€</span>
+          
+          <div class="cardsmenu__inside slide-top-2">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>roasted lobster</h4>
+                <p>With seasonal vegetables</p>
+              </section>
+              <span>35€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>angust beef ribs</h4>
-              <p>With mashed parshnips</p>
-            </section>
-            <span>44€</span>
+          
+          <div class="cardsmenu__inside slide-top-3">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>angust beef ribs</h4>
+                <p>With mashed parshnips</p>
+              </section>
+              <span>44€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
         </div>
 
         <div class="cardsmenu__entrees">
           <h3 class="h3">desserts</h3>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>assorted dessert plate</h4>
-              <p>Chef's choice</p>
-            </section>
-            <span>18€</span>
+          <div class="cardsmenu__inside slide-top">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>assorted dessert plate</h4>
+                <p>Chef's choice</p>
+              </section>
+              <span>18€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>creme brulee</h4>
-              <p>Revisited</p>
-            </section>
-            <span>22€</span>
+          
+          <div class="cardsmenu__inside slide-top-2">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>creme brulee</h4>
+                <p>Revisited</p>
+              </section>
+              <span>22€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
-          <div class="cardsmenu__details">
-            <section>
-              <h4>tiramisu</h4>
-              <p>With hazelnuts</p>
-            </section>
-            <span>23€</span>
+          
+          <div class="cardsmenu__inside slide-top-3">
+            <div class="cardsmenu__details">
+              <section>
+                <h4>tiramisu</h4>
+                <p>With hazelnuts</p>
+              </section>
+              <span>23€</span>
+            </div>
+            <div class="cardsmenu__slide">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
           </div>
         </div>
 
@@ -118,8 +178,7 @@
       </div>
     </div>
     
-    
-
+<!-- FOOTER -->
     <footer>
       <div class="container">
         <div class="footer-logo">
@@ -145,7 +204,7 @@
               </a>
             </li>
             <li>
-              <a href="#" title="Contact">
+              <a href="mailto:xyz@gmail.com" title="Contact">
                 Contact
               </a>
             </li>

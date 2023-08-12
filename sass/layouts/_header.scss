@@ -6,9 +6,10 @@ header {
     @include shadowbottom;
     .header-logo {
         @include flexcentre;
-        }
+        position: relative;
+    }
     img {
-        width: 200px;
+        width: 175px;
         height: auto;
         min-width: 150px;
     }

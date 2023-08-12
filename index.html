@@ -10,7 +10,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="body">
+
+  <!-- LOADER -->
+  <div class="loader">
+    <div class="loader__in">Loading
+      <span></span>
+    </div>
+  </div>
+    
+  <!-- HEADER -->
     <header>
       <div class="container">
         <div class="header-logo">
@@ -19,6 +28,7 @@
       </div>
     </header>
 
+  <!-- LOCATION -->
     <div class="header__location">
       <div class="container-main">
         <form class="header-search" action="/action_page.php">
@@ -28,6 +38,7 @@
       </div>
     </div>
 
+  <!-- BOOKMENU -->
     <div class="bookmenu">
       <div class="container-main bookmenu__inside">
         <h1>Book the menu you like</h1>
@@ -36,6 +47,7 @@
       </div>
     </div>
 
+  <!-- WORKS -->
     <div class="works">
       <div class="works__inside">
         <h2>How it works</h2>
@@ -60,6 +72,7 @@
       </div>
     </div>
 
+  <!-- CARDS -->
     <div class="restaurantmain">
       <div class="restaurantmain__in">
         <h3>restaurants</h3>
@@ -70,8 +83,10 @@
                 <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="the full palette new york" title="the full palett new york">            
               </div>
               <div class="restaurantmain__details">
-              <h4>the full palette<br><span>new york</span></h4>
-              <i class="fa-regular fa-heart"></i>
+                <h4>the full palette<br><span>new york</span></h4>
+                <button type="button">
+                  <i class="fas fa-heart"></i>
+                </button>
               </div>
             </a>
           </section>
@@ -82,7 +97,9 @@
               </div>
               <div class="restaurantmain__details">
                 <h4>the enchanted plate<br><span>new york</span></h4>
-                <i class="fa-regular fa-heart"></i>
+                <button type="button">
+                  <i class="fas fa-heart"></i>
+                </button>
               </div>
             </a>
           </section>
@@ -93,7 +110,9 @@
               </div>
               <div class="restaurantmain__details">
                 <h4>bastille<br><span>new york</span></h4>
-                <i class="fa-regular fa-heart"></i>
+                <button type="button">
+                  <i class="fas fa-heart"></i>
+                </button>
               </div>
             </a>
           </section>
@@ -104,14 +123,17 @@
               </div>
               <div class="restaurantmain__details">
                 <h4>le gourmand<br><span>new york</span></h4>
-                <i class="fa-regular fa-heart"></i>
+                <button type="button">
+                  <i class="fas fa-heart"></i>
+                </button>
               </div>
             </a>
           </section>
         </div>
       </div>
     </div>
-
+  
+  <!-- FOOTER -->
     <footer>
       <div class="container">
         <div class="footer-logo">
@@ -137,7 +159,7 @@
               </a>
             </li>
             <li>
-              <a href="#" title="Contact">
+              <a href="mailto:xyz@gmail.com" title="Contact">
                 Contact
               </a>
             </li>
