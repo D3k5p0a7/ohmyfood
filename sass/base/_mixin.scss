@@ -99,3 +99,27 @@
     animation-duration: 0s;
     animation-delay: 2s;
 }
+
+@mixin mobile-portrait {
+    @media (min-width: 320px) and (max-width: 567px) {
+        @content;
+    }
+}
+
+@mixin mobile-landscape {
+    @media (min-width: 568px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media (min-width: 1024px) {
+      @content;
+    }
+}

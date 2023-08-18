@@ -38,6 +38,7 @@ button {
 }
 
 .loader{
+    display: none !important;
     @include spinner;
     @include flexcentre;
     &__in{
@@ -102,22 +103,3 @@ button {
     }
 }
 
-.slide-top {
-	-webkit-animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-	        animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-}
-
-.slide-top-2 {
-	-webkit-animation: slide-top-2 2.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-	        animation: slide-top-2 2.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-}
-
-.slide-top-3 {
-	-webkit-animation: slide-top-3 2.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-	        animation: slide-top-3 2.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-}
-
-.slide-top-4 {
-	-webkit-animation: slide-top-4 3.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-	        animation: slide-top-4 3.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s forwards;
-}

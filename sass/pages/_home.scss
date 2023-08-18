@@ -33,7 +33,7 @@ h2, h3{
     background-color: $color-grey;
     position: relative;
     z-index: 1;
-    padding: 7px 0;
+    padding: 15px 0;
     .container-main{
        form{
         @include flexcentre;
@@ -41,10 +41,14 @@ h2, h3{
         i{
             font-size: $font20;
         }
-        p{
-            margin-left: $left20px;
+        input{
+            background-color: $color-grey;
             font-weight: $weight600;
             font-size: $font20;
+            outline: none ;
+            border: none;
+            text-align: center;
+            width: 160px;
         }
        }
     }

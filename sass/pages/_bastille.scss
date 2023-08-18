@@ -76,8 +76,24 @@
         display: flex;
         position: relative;
         overflow: hidden;
+        animation: fadeInUp 1s ease-in-out;
     }
-   
+    .slide-top{
+        animation: fadeInUp 0.4s ease-in-out forwards;
+        animation-delay: 0s;
+    }
+    .slide-top-2{
+        animation: fadeInUp 0.4s ease-in-out forwards;
+        animation-delay: 0.1s;
+    }
+    .slide-top-3{
+        animation: fadeInUp 0.4s ease-in-out forwards;
+        animation-delay: 0.2s;
+    }
+    .slide-top-4{
+        animation: fadeInUp 0.4s ease-in-out forwards;
+        animation-delay: 0.3s;
+    }
     &__inside:hover &__slide {
         right: 0;
         border-radius: 0 20px 20px 0;
