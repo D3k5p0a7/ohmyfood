@@ -3,6 +3,20 @@ footer{
     background-color: $color-footer;
     .container{
         @include container-space;
+        @include mobile-landscape{
+            max-width: 100%;
+            padding: 0 50px;
+            text-align: center;
+        }
+        @include desktop-only{
+            max-width: 1440px;
+        }
+    }
+    ul{
+        @include mobile-landscape{
+            display: flex;
+            justify-content: space-around;
+        }
     }
     img{
         width: 170px;

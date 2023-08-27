@@ -1,9 +1,33 @@
- 
+.box-desktop{
+    width: 100%;
+    margin: auto;
+    @include mobile-321{
+        display: block;
+    }
+    @include tablet-only{
+        @include flexcentre;
+    }
+    @include desktop-big{
+        max-width: 1440px;
+    }
+}
+.header-section{
+    @include tablet-only{
+        @include flexcentre;
+        justify-content: space-between;
+        background: linear-gradient(90deg, rgb(228, 113, 218) 36%, rgb(160, 90, 220) 100%);
+    }
+} 
 header {
     padding: 30px 0 20px;
     position: relative;
     z-index: 2;
     @include shadowbottom;
+    @include tablet-only{
+        padding: 0;
+        box-shadow: none;
+        width: 50%;
+    }
     .header-logo {
         @include flexcentre;
         position: relative;

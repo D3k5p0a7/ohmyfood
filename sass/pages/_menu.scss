@@ -1,4 +1,9 @@
 .header{
+    @include mobile-landscape{
+        padding: 30px 0 20px;
+        width: 100%;
+        @include shadowbottom;
+    }
     i{
         font-size: $font28;
         color: $color-black;
@@ -21,6 +26,12 @@
     border-radius: 60px 60px 0 0;
     margin-top: -60px;
     position: relative;
+    @include desktop-only{
+        max-width: 100%;
+    }
+    @include desktop-big{
+        max-width: 1440px;
+    }
 }
 .menusin{
     margin-bottom: 30px;
@@ -77,6 +88,18 @@
         position: relative;
         overflow: hidden;
         animation: fadeInUp 1s ease-in-out;
+        @include desktop-only{
+            flex: 1;
+            margin-right: 2%;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    .row-direction{
+        @include desktop-only{
+            display: flex;
+        }
     }
     .slide-top{
         animation: fadeInUp 0.4s ease-in-out forwards;
@@ -139,6 +162,9 @@
         justify-content: center;
         transition: right 0.7s ease-in-out;
         height: 85px;
+        @include mobile-landscape{
+            right: -165px;
+        }
         i{
             @include flexcentre;
             width: 100%;
@@ -162,5 +188,18 @@
             padding: 20px 120px;
             margin-top: 30px;
         }
+    }
+}
+
+// ....the-enchanted-plate.....
+.fullpalette {
+    margin-top: -90px;
+}
+
+
+// ------the-full-palette------
+.menusin{
+    .enchantedplate{
+        align-items: normal;
     }
 }

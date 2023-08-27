@@ -19,6 +19,11 @@ h2, h3{
     text-transform: capitalize;
     font-size: $font26;
     margin: 0;
+    @include desktop-only{
+        br{
+            display: none;
+        }
+    }
 }
 .h3{
     text-transform: uppercase;
@@ -28,12 +33,20 @@ h2, h3{
 }
 .container-main{
     @include container-mb;
+    @include mobile-landscape{
+        max-width: 100%;
+    }
 }
 .header__location{
     background-color: $color-grey;
     position: relative;
     z-index: 1;
     padding: 15px 0;
+    @include tablet-only{
+        background: transparent;
+        width: 50%;
+        padding: 30px 0;
+    }
     .container-main{
        form{
         @include flexcentre;
@@ -49,6 +62,9 @@ h2, h3{
             border: none;
             text-align: center;
             width: 160px;
+            @include mobile-landscape{
+                background: transparent;
+            }
         }
        }
     }
@@ -57,6 +73,12 @@ h2, h3{
 .bookmenu{
     background-color: $color-lightgrey;
     padding: $paddingtopbottm;
+    @include tablet-only{
+        width: 50%;
+        display: inline-block;
+        padding: 70px 0;
+        background-color: $color-grey;
+    }
     &__inside{
         flex-direction: column;
         align-items: center;
@@ -66,15 +88,29 @@ h2, h3{
             font-weight: $weight300;
             padding-bottom: $spacebottom;
             line-height: 1.3;
+            @include mobile-320{
+                font-size: $font17;
+            }
         }
         a{
             @include buttonformat;
+            &:hover{
+                background: linear-gradient(90deg, rgba(228,113,218,1) 36%, rgba(160,90,220,1) 100%);
+                transition: 0.7s all ease-in;
+                color: $color-black;
+            }
         }
     }
 }
 
 .works{
     padding: $paddingtopbottm;
+    @include tablet-only{
+        width: 50%;
+        display: inline-block;
+        float: right;
+        padding: 22px 0;
+    }
     &__inside{
         @include container-space;
         h2{
@@ -96,6 +132,12 @@ h2, h3{
                 font-weight: $weight600;
                 align-items: center;
                 @include shadowbottom;
+                @include mobile-320{
+                    font-size: $font12;
+                }
+                @include mobile-landscape{
+                    font-size: $font14;
+                }
                 &:hover{
                     i{
                         color: $color-primary;
@@ -158,6 +200,9 @@ h2, h3{
 .restaurantmain{
     background-color: $color-lightgrey;
     padding: $paddingtopbottm;
+    @include mobile-landscape{
+        padding: 30px 0;
+    }
     a{
         color: $color-black;
         &:hover{
@@ -173,18 +218,27 @@ h2, h3{
         text-transform: $text-transform;
         line-height: 1.4;
         margin: 20px 0;
+        @include mobile-landscape{
+            font-size: $font14;
+        }
         span{
             font-weight: $weight300;
         }
     }
     i{
         @include fa-heart;
+        @include mobile-landscape{
+            font-size: $font20;
+        }
     }
     img{
         object-fit: cover;
         width: 100%;
         height: 220px;
         border-radius: 25px 25px 0 0;
+        @include mobile-landscape{
+            height: 180px;
+        }
     }
     &__section {
         margin-bottom: 35px;
@@ -192,10 +246,44 @@ h2, h3{
         border-radius: 25px;
         &:last-child{
             margin-bottom: 0;
+            @include mobile-landscape{
+                margin-bottom: auto;
+            }
+        }
+        @include mobile-landscape{
+            width: 48%;
+            margin-right: 4%;
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+        }
+        @include desktop-only{
+            width: 100%;
+            margin-right: 2%;
+            flex: 1;
+            &:nth-child(2n){
+                margin-right: 2%;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
         }
     }
     &__in{
         @include container-space;
+        @include mobile-landscape{
+            max-width: 100%;
+            padding: 0 50px;
+        }
+        @include desktop-only{
+            max-width: 1440px;
+        }
+    }
+    &__category{
+        @include mobile-landscape{
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
     &__img{
         position: relative;
@@ -222,6 +310,12 @@ h2, h3{
         background-color: $color-white;
         border-radius: 0 0 25px 25px;
         position: relative;
+        @include mobile-landscape{
+            padding: 0px 10px;
+        }
+        @include desktop-only{
+            padding: 0px 20px;
+        }
     }
     &__details:hover i{
        @include heartbutton;
