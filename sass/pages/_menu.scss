@@ -187,6 +187,11 @@
             @include buttonformat;
             padding: 20px 120px;
             margin-top: 30px;
+            &:hover{
+                background: linear-gradient(90deg, rgba(228,113,218,1) 36%, rgba(160,90,220,1) 100%);
+                transition: 0.7s all ease-in;
+                color: $color-black;
+            }
         }
     }
 }

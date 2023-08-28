@@ -26,6 +26,10 @@ footer{
         color: $color-white;
         font-size: $font17;
         line-height: 1.6;
+        &:hover{
+            color: $color-primary;
+            @include smoothtrans;
+        }
     }
     i{
         width: 35px;
