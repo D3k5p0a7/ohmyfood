@@ -110,11 +110,6 @@
     }
 }
 
-@mixin mobile-portrait {
-    @media (min-width: 320px) and (max-width: 567px) {
-        @content;
-    }
-}
 
 @mixin mobile-landscape {
     @media (min-width: 668px) {

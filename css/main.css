@@ -834,6 +834,12 @@ h2, h3 {
   align-items: normal;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body, html {
   font-family: "Roboto";
   overflow-x: hidden;
@@ -847,12 +853,6 @@ body, html {
   .container {
     max-width: 100%;
   }
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 button {
