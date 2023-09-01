@@ -714,15 +714,15 @@ h2, h3 {
   }
 }
 .cardsmenu .slide-top {
-  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0s;
 }
 .cardsmenu .slide-top-2 {
-  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0.1s;
 }
 .cardsmenu .slide-top-3 {
-  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation: fadeInUp 1s ease-in-out forwards;
   animation-delay: 0.2s;
 }
 .cardsmenu .slide-top-4 {
